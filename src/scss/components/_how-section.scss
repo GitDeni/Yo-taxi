@@ -1,0 +1,355 @@
+.how {
+	padding-top: vw(90);
+	height: vw(880);
+	background-image: url("../../images/how-bg-1.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #121c24;
+
+	@include mobile {
+		padding-top: vmin(90);
+		height: vmin(800);
+		background-size: cover;
+	}
+
+	h2 {
+		width: 100%;
+		text-align: center;
+		color: rgb(255, 255, 255);
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.subtitle {
+		font-family: $g-p-light;
+		font-size: vw(18);
+		line-height: vw(30);
+		color: rgb(255, 255, 255);
+
+		@include mobile {
+			font-size: vmin(18);
+			line-height: vmin(30);
+		}
+	}
+
+	.road {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding: vw(50) vw(60);
+		width: 100%;
+		height: vw(230);
+		background-image: url('../../images/road.png');
+		background-position: 0 bottom;
+		// background-size: contain;
+		background-repeat: no-repeat;
+
+		@include mobile {
+			display: none;
+		}
+
+		.stage {
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: vw(30);
+			position: relative;
+			font-family: $g-p-light;
+			font-size: vw(14);
+			text-align: center;
+			color: #fff;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+
+			span {
+				opacity: 0.8;
+			}
+
+			img {
+				margin-right: vw(6);
+				width: vw(10);
+				height: vw(10);
+			}
+
+			.how-pin {
+				width: 1px;
+				height: vw(34);
+				background-color: #474f55;
+			}
+
+			&::after {
+				content: url('../../images/dot.png');
+				position: absolute;
+				top: vw(55);
+				width: vw(5);
+				height: vw(5);
+				// box-shadow: 0 5px 10px rgba(77, 180, 248, 0.6);
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		.stage.blurred {
+			opacity: 0.3;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		.carrr {
+			position: absolute;
+			transition: all 0.3s ease-in-out;
+
+			img {
+				width: vw(173);
+				height: vw(64);
+			}
+		}
+
+		.carrr.mark-0 {
+			left: vw(40);
+			bottom: vw(20);
+		}
+
+		.carrr.mark-1 {
+			left: vw(230);
+			bottom: vw(20);
+		}
+
+		.carrr.mark-2 {
+			left: vw(490);
+			bottom: vw(20);
+		}
+
+		.carrr.mark-3 {
+			left: vw(750);
+			bottom: vw(20);
+		}
+
+		.carrr.mark-4 {
+			left: vw(980);
+			bottom: vw(20);
+		}
+	}
+
+	.tabs {
+		width: 100%;
+	}
+
+	.tab-pane {
+		.content {
+			padding: vw(100) vw(40);
+			width: 60%;
+
+			@include mobile {
+				padding: vmin(50) vmin(40);
+				width: 100%;
+			}
+		}
+
+		.image {
+			position: relative;
+
+			@include mobile {
+				display: none;
+			}
+		}
+	}
+
+	h4 {
+		position: relative;
+		margin-bottom: vw(15);
+		font-family: $g-p-light;
+		font-size: vw(24);
+		text-transform: uppercase;
+		color: #fff;
+
+		@include mobile {
+			margin-bottom: vmin(15);
+			font-size: vmin(24);
+		}
+
+		br {
+			@include mobile {
+				display: none;
+			}
+		}
+
+		&::before {
+			content: url('../../images/blue-ellipse.png');
+			position: absolute;
+			left: vw(-40);
+
+			@include mobile {
+				left: vmin(-40);
+			}
+		}
+	}
+
+	.tab-subtitle {
+		margin-bottom: vw(45);
+		font-family: $g-p-light;
+		font-size: vw(16);
+		line-height: vw(28);
+		color: #fff;
+
+		@include mobile {
+			margin-bottom: vmin(45);
+			font-size: vmin(16);
+			line-height: vmin(28);
+		}
+
+		br {
+			@include mobile {
+				display: none;
+			}
+		}
+
+		span {
+			font-family: $g-p-bold;
+		}
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: vw(50);
+		padding-right: vw(60);
+
+		@include mobile {
+			flex-wrap: wrap;
+			margin-bottom: vmin(50);
+			padding-right: 0;
+		}
+
+		.main-button {
+			width: vw(240);
+			
+			@include mobile {
+				width: 100%;
+			}
+		}
+
+		.white-blue-button {
+			width: vw(290);
+
+			@include mobile {
+				margin-top: vmin(20);
+				width: 100%;
+			}
+		}
+	}
+
+	.how-next {
+		position: relative;
+		outline: none;
+		border: none;
+		padding-bottom: vw(5);
+		font-family: $g-p-medium;
+		font-size: vw(12);
+		text-transform: uppercase;
+		color: #fff;
+		background-color: transparent;
+		opacity: 0.6;
+		cursor: pointer;
+
+		@include mobile {
+			padding-bottom: vmin(5);
+			font-size: vmin(16);
+		}
+
+		&::after {
+			content: url('../../images/how-arrow.png');
+			position: absolute;
+			right: vw(-70);
+			top: 0;
+
+			@include mobile {
+				right: vmin(-90);
+			}
+		}
+
+		&:hover {
+			opacity: 1;
+			border-bottom: 1px dashed #fff;
+		}
+	}
+
+	.how-1 {
+		position: absolute;
+		right: vw(-40);
+		top: vw(50);
+		width: vw(536);
+		height: vw(354);
+	}
+
+	.how-2 {
+		position: absolute;
+		right: vw(-40);
+		top: vw(30);
+		width: vw(456);
+		height: vw(445);
+	}
+
+	// .how-1-tree {
+	// 	left: vw(20);
+	// }
+
+	// .how-tree {
+	// 	position: absolute;
+	// 	width: vw(373);
+	// 	height: vw(281);
+	// }
+
+	.name {
+		position: absolute;
+		left: vw(-470);
+		top: vw(245);
+		z-index: 5;
+		border-radius: vw(10);
+		padding: vw(15) vw(25);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+		font-size: vw(14);
+		line-height: vw(20);
+		background-color: #fff;
+	}
+
+	.job-title {
+		position: absolute;
+		left: vw(-400);
+		top: vw(280);
+		border-radius: vw(10);
+		padding: vw(20) vw(15) vw(15);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+		font-size: vw(13);
+		line-height: vw(20);
+		background-color: #fff;
+	}
+
+	.how-3 {
+		width: vw(584);
+		height: vw(458);
+		position: absolute;
+		right: vw(-130);
+		top: vw(45);
+	}
+
+	.how-4 {
+		width: vw(576);
+		height: vw(379);
+		position: absolute;
+		right: vw(-30);
+		top: vw(65);
+	}
+
+	.how-5 {
+		width: vw(843);
+		height: vw(489);
+		position: absolute;
+		right: vw(-400);
+		top: vw(30);
+	}
+}

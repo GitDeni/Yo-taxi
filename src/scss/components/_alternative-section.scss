@@ -1,0 +1,268 @@
+.alternative {
+	padding-top: vw(100);
+	padding-bottom: vw(95);
+
+	@include mobile {
+		padding-top: vmin(100);
+		padding-bottom: vmin(95);
+	}
+
+	.alt-header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: vw(40);
+		width: 100%;
+
+		@include mobile {
+			margin-bottom: vmin(40);
+		}
+
+		h2 {
+			margin-bottom: vw(5);
+			width: 100%;
+
+			@include mobile {
+				width: 100%;
+				margin-bottom: vmin(15);
+			}
+
+			&::before {
+				top: vw(-25);
+
+				@include mobile {
+					top: vmin(-25);
+				}
+			}
+		}
+
+		.alt-tip {
+			display: flex;
+			justify-content: space-between;
+			margin-top: vw(30);
+			margin-right: vw(50);
+			padding-top: vw(5);
+			font-family: $g-p-light;
+			font-size: vw(16);
+			line-height: vw(25);
+
+			@include mobile {
+				margin-right: 0;
+				margin-top: vmin(30);
+				padding-top: vmin(5);
+				font-size: vmin(16);
+				line-height: vmin(25);
+			}
+
+			span {
+				font-family: $g-p-medium;
+			}
+
+			.subtitle {
+				font-family: $g-p-light;
+				font-size: vw(13);
+
+				@include mobile {
+					font-size: vmin(13);
+				}
+			}
+
+			&__image {
+				position: relative;
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				margin-right: vw(30);
+				border-radius: 50%;
+				width: vw(70);
+				height: vw(70);
+				background-color: $sky-blue;
+
+				@include mobile {
+					margin-right: vmin(30);
+					width: vmin(70);
+					height: vmin(70);
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: vw(-120);
+					bottom: vw(-120);
+					width: vw(103);
+					height: vw(158);
+					background-image: url("../../images/tip-line.png");
+					background-size: contain;
+					background-repeat: no-repeat;
+
+					@include mobile {
+						display: none;
+						// left: vw(-120);
+						// bottom: vw(-120);
+						width: vmin(103);
+						height: vmin(158);
+					}
+				}
+
+				img {
+					width: vw(112);
+					height: vw(69);
+
+					@include mobile {
+						width: vmin(112);
+						height: vmin(69);
+					}
+				}
+			}
+		}
+
+		.h-subtitle {
+			font-family: $g-p-light;
+			font-size: vw(18);
+			line-height: vw(30);
+
+			@include mobile {
+				font-size: vmin(18);
+				line-height: vmin(30);
+			}
+		}
+	}
+
+	.alt-content {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+
+		@include mobile {
+			flex-wrap: wrap;
+		}
+
+		.box-wrapper {
+			width: 55%;
+
+			@include mobile {
+				width: 100%;
+			}
+
+			.box {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				@include mobile {
+					margin-bottom: vmin(30);
+				}
+
+				&-img {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: vw(105);
+					height: vw(105);
+
+					@include mobile {
+						width: vmin(105);
+						height: vmin(105);
+					}
+
+					&-1 {
+						width: vw(76);
+						height: vw(81);
+
+						@include mobile {
+							width: vmin(76);
+							height: vmin(81);
+						}
+					}
+
+					&-2 {
+						width: vw(69);
+						height: vw(60);
+
+						@include mobile {
+							width: vmin(69);
+							height: vmin(60);
+						}
+					}
+
+					&-3 {
+						width: vw(85);
+						height: vw(52);
+
+						@include mobile {
+							width: vmin(85);
+							height: vmin(52);
+						}
+					}
+
+					&-4 {
+						width: vw(98);
+						height: vw(105);
+
+						@include mobile {
+							width: vmin(98);
+							height: vmin(105);
+						}
+					}
+				}
+
+				&-text {
+					font-family: $g-p-light;
+					font-size: vw(16);
+					line-height: vw(25);
+
+					@include mobile {
+						font-size: vmin(16);
+						line-height: vmin(25);
+					}
+
+					span {
+						font-family: $g-p-medium;
+					}
+				}
+			}
+
+			.alt-buttons {
+				position: relative;
+				z-index: 10;
+				display: flex;
+				justify-content: space-between;
+				margin-top: vw(30);
+
+				@include mobile {
+					flex-wrap: wrap;
+				}
+
+				.white-blue-button {
+					@include mobile {
+						margin-top: vmin(20);
+					}
+				}
+			}
+		}
+
+		.absolutes {
+			position: absolute;
+			left: vw(550);
+			top: vw(-50);
+
+			@include mobile {
+				position: relative;
+				left: 0;
+				top: 0;
+				margin-top: vmin(50);
+			}
+
+			.paper {
+				width: vw(564);
+				height: vw(603);
+
+				@include mobile {
+					width: vmin(300);
+					height: vmin(303);
+				}
+			}
+		}
+	}
+}

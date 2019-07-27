@@ -1,0 +1,123 @@
+.credit-section {
+	padding-top: vw(120);
+	padding-bottom: vw(280);
+	background-color: #f9f9f9;
+
+	@include mobile {
+		padding-top: vmin(100);
+		padding-bottom: vmin(100);
+	}
+
+	h2 {
+		margin-bottom: vw(15);
+		width: 100%;
+		text-align: center;
+
+		// &::before {
+		// 	content: url('../../images/before-h2.png');
+		// 	left: 45%;
+		// 	top: vw(-30);
+
+		// 	@include mobile {
+		// 		left: 30%;
+		// 		top: vmin(-40);
+		// 	}
+		// }
+	}
+
+	.blue-link {
+		margin-bottom: vw(60);
+
+		@include mobile {
+			margin-bottom: vmin(60);
+		}
+	}
+
+	.blue-link-span {
+		font-size: vw(18);
+
+		@include mobile {
+			font-size: vmin(18);
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			margin-left: vw(15);
+			width: vw(16);
+			height: vw(16);
+			background-image: url("../../images/click-mini.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+
+			@include mobile {
+				margin-left: vmin(15);
+				width: vmin(16);
+				height: vmin(16);
+			}
+		}
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+
+		.card {
+			display: flex;
+			flex-flow: column;
+			flex-wrap: wrap;
+			border-radius: vw(10);
+			padding: vw(40) vw(10) vw(30) vw(10);
+			width: vw(180);
+			text-align: center;
+			background-color: #fff;
+
+			@include mobile {
+				border-radius: vmin(10);
+				padding: vmin(40) vmin(10) vmin(30) vmin(10);
+				width: 100%;
+				margin-bottom: vmin(30);
+			}
+
+			&-img {
+				margin-bottom: vw(20);
+				width: 100%;
+
+				@include mobile {
+					margin-bottom: vmin(20);
+				}
+			}
+
+			&-header {
+				margin-bottom: vw(8);
+				font-family: $g-p-bold;
+				font-size: vw(13);
+				line-height: vw(20);
+				text-transform: uppercase;
+
+				@include mobile {
+					margin-bottom: vmin(8);
+					font-size: vmin(13);
+					line-height: vmin(20);
+				}
+			}
+
+			&-description {
+				font-family: $g-p-light;
+				font-size: vw(13);
+				line-height: vw(18);
+
+				@include mobile {
+					font-size: vmin(13);
+					line-height: vmin(18);
+				}
+
+				span {
+					font-family: $g-p-medium;
+				}
+			}
+		}
+	}
+}

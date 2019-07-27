@@ -1,0 +1,146 @@
+.pleasure {
+	padding-top: vw(115);
+	padding-bottom: vw(100);
+	background-image: url("../../images/pl-bg.png");
+	background-repeat: no-repeat;
+	background-position: 30% bottom;
+
+	@include mobile {
+		padding-top: vmin(100);
+		padding-bottom: vmin(100);
+		background-image: none;
+	}
+
+	h2 {
+		margin-bottom: vw(70);
+
+		@include mobile {
+			margin-bottom: vmin(30);
+		}
+	}
+
+	h2::before {
+		left: 43%;
+		top: vw(-30);
+		width: vw(169);
+		background-image: url("../images/c-logo.png");
+
+		@include mobile {
+			left: vmin(10);
+			top: vmin(-40);
+			width: vmin(169);
+		}
+	}
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		padding-left: vw(120);
+		width: 100%;
+
+		@include mobile {
+			flex-wrap: wrap;
+			padding-left: 0;
+		}
+
+		.col-l,
+		.col-r {
+			border-radius: vw(10);
+			padding: vw(10) 0;
+			box-shadow: 0 vw(15) vw(20) rgba(0, 0, 0, 0.05);
+			background-color: #fff;
+
+			@include mobile {
+				width: 100%;
+				padding: vmin(10) 0;
+			}
+
+			.card {
+				position: relative;
+				padding: vw(30) vw(30) vw(20);
+				width: 100%;
+				box-shadow: 0 vw(28) vw(25) vw(-20) rgba(0, 0, 0, 0.1);
+
+				@include mobile {
+					padding: vmin(40) vmin(10) vmin(20) vmin(60);
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: vw(-120);
+					top: 0;
+					width: vw(80);
+					height: vw(95);
+					background-size: contain;
+					background-repeat: no-repeat;
+
+					@include mobile {
+						left: vmin(-10);
+						top: vmin(-30);
+						width: vmin(80);
+						height: vmin(95);
+					}
+				}
+
+				&-h {
+					margin-bottom: vw(10);
+					font-family: $g-p-bold;
+					font-size: vw(14);
+					line-height: vw(20);
+					letter-spacing: vw(0.7);
+					text-transform: uppercase;
+
+					@include mobile {
+						margin-bottom: vmin(10);
+						font-size: vmin(14);
+						line-height: vmin(20);
+						letter-spacing: vmin(0.7);
+					}
+				}
+
+				&-p {
+					padding-bottom: vw(20);
+					font-family: $g-p-light;
+					font-size: vw(14);
+					line-height: vw(20);
+
+					@include mobile {
+						padding-bottom: vmin(20);
+						font-size: vmin(14);
+						line-height: vmin(20);
+					}
+				}
+
+				&:last-child {
+					padding-bottom: 0;
+					box-shadow: none;
+				}
+			}
+
+			.c-1::before {
+				background-image: url("../../images/p-1.png");
+			}
+
+			.c-2::before {
+				background-image: url("../../images/p-2.png");
+			}
+
+			.c-3::before {
+				background-image: url("../../images/p-3.png");
+			}
+
+			.c-4::before {
+				background-image: url("../../images/p-4.png");
+			}
+
+			.c-5::before {
+				background-image: url("../../images/p-5.png");
+			}
+
+			.c-6::before {
+				background-image: url("../../images/p-6.png");
+			}
+		}
+	}
+}

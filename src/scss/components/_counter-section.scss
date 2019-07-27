@@ -1,0 +1,163 @@
+.counter-section {
+	.container {
+		.banner {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			margin-top: vw(-210);
+			padding-top: vw(50);
+			padding-bottom: vw(80);
+			width: 100%;
+			background-image: url("../../images/counter-bg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			@include mobile {
+				// margin-top: vmin(-210);
+				padding-top: vmin(50);
+				padding-bottom: vmin(80);
+			}
+
+			.counter {
+				width: 30%;
+				text-align: center;
+
+				@include mobile {
+					width: 90%;
+				}
+
+				&-m {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					justify-content: space-between;
+				}
+
+				h3 {
+					margin-bottom: vw(50);
+					font-family: $g-p-light;
+					font-size: vw(28);
+					line-height: vw(55);
+					letter-spacing: vw(1.2);
+					text-transform: uppercase;
+					color: #fff;
+
+					@include mobile {
+						margin-bottom: vmin(50);
+						font-size: vmin(28);
+						line-height: vmin(55);
+						letter-spacing: vmin(1.2);
+					}
+
+					.hours {
+						font-size: vw(52);
+						letter-spacing: vw(2);
+
+						@include mobile {
+							margin: 0 auto;
+							font-size: vmin(52);
+							letter-spacing: vmin(2);
+						}
+					}
+
+					.new-auto {
+						font-size: vw(24);
+						letter-spacing: vw(0.9);
+						text-transform: none;
+
+						@include mobile {
+							font-size: vmin(24);
+							letter-spacing: vmin(0.9);
+						}
+					}
+				}
+
+				.counter-m img {
+					width: vw(123);
+					height: vw(70);
+
+					@include mobile {
+						margin: 0 auto;
+						width: vmin(123);
+						height: vmin(70);
+					}
+				}
+			}
+
+			.buttons {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				width: 55%;
+
+				.white-blue-button {
+					@include mobile {
+						margin-top: vmin(40);
+					}
+				}
+			}
+
+			.absolutes {
+				position: relative;
+
+				.watch-img {
+					position: absolute;
+					left: vw(-500);
+					top: vw(-150);
+					width: vw(250);
+					height: vw(427);
+
+					@include mobile {
+						left: vmin(-130);
+						top: vmin(50);
+						z-index: 2;
+						width: vmin(150);
+						height: vmin(256);
+					}
+				}
+
+				.dotted-banner {
+					position: absolute;
+					left: vw(340);
+					top: vw(-15);
+					display: flex;
+					flex-wrap: wrap;
+					align-content: space-between;
+					border: 1px dashed rgba(255, 255, 255, 0.4);
+					border-radius: vw(10);
+					padding: vw(24);
+					width: vw(212);
+					height: vw(119);
+					font-family: $g-p-light;
+					font-size: vw(13);
+					line-height: vw(16);
+					color: rgb(255, 255, 255);
+
+					@include mobile {
+						position: relative;
+						left: 0;
+						top: 0;
+						display: flex;
+						border-radius: vmin(10);
+						padding: vmin(24);
+						width: vmin(212);
+						height: vmin(119);
+						font-size: vmin(13);
+						line-height: vmin(16);
+						margin-bottom: vmin(20);
+					}
+
+					span {
+						font-size: vw(36);
+						text-transform: uppercase;
+						color: $sky-blue;
+
+						@include mobile {
+							font-size: vmin(36);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,145 @@
+.header {
+	padding-top: vw(25);
+
+	.container {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.part-wrapper {
+		display: flex;
+		align-items: center;
+
+		@include mobile {
+			flex-wrap: wrap;
+		}
+	}
+
+	.logo {
+		img {
+			width: vw(196);
+			height: vw(41);
+
+			@include mobile {
+				width: vmin(196);
+				height: vmin(41);
+			}
+		}
+	}
+
+	.header-address {
+		display: flex;
+		margin-left: vw(20);
+		font-family: $g-p-light;
+		font-style: normal;
+		
+		@include mobile {
+			display: none;
+			margin-left: vmin(20);
+		}
+
+		> img {
+			margin-right: vw(20);
+			width: vw(60);
+			height: vw(50);
+
+			@include mobile {
+				margin-right: vmin(20);
+				width: vmin(60);
+				height: vmin(50);
+			}
+		}
+	}
+
+	.c-h {
+		font-size: vw(12);
+		letter-spacing: vw(0.5);
+		opacity: 0.6;
+
+		@include mobile {
+			font-size: vmin(12);
+			letter-spacing: vmin(0.5);
+		}
+	}
+
+	.c-text {
+		font-size: vw(13);
+		line-height: vw(24);
+		color: $main-font-color;
+
+		@include mobile {
+			font-size: vmin(13);
+			line-height: vmin(24);
+		}
+	}
+
+	.c-sub {
+		font-size: vw(12);
+		opacity: 0.6;
+
+		@include mobile {
+			font-size: vmin(12);
+		}
+
+		img {
+			margin-right: vw(4);
+
+			@include mobile {
+				margin-right: vmin(4);
+			}
+		}
+	}
+
+	.burger {
+		display: none;
+
+		// @include mobile {
+		// 	display: inline-block;
+		// }
+		img {
+			width: vmin(45);
+			height: vmin(40);
+			margin-right: vmin(30);
+		}
+	}
+
+	.telephone {
+		position: relative;
+		font-size: vw(16);
+
+		@include mobile {
+			font-size: vmin(16);
+			margin: vmin(20);
+		}
+
+		.blue-link {
+			@include mobile {
+				// display: none;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: vw(-20);
+			top: vw(3);
+			width: vw(13);
+			height: vw(13);
+			background-image: url("../../images/phone-call.png");
+			background-repeat: no-repeat;
+
+			@include mobile {
+				left: vmin(-20);
+				top: vmin(5);
+				width: vmin(13);
+				height: vmin(13);
+			}
+		}
+	}
+
+	.no-border-button {
+		@include mobile {
+			display: none;
+		}
+	}
+}

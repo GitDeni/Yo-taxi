@@ -1,0 +1,192 @@
+.map {
+	.map-wrapper {
+		overflow: hidden;
+		margin-top: vw(-300);
+		border-radius: vw(10);
+		width: 100%;
+		height: vw(600);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+		@include mobile {
+			margin-top: vmin(-300);
+			border-radius: vmin(10);
+			height: vmin(500);
+			margin-bottom: vmin(30);
+		}
+	}
+
+	.contacts-wrapper {
+		position: absolute;
+		left: vw(70);
+		top: vw(-250);
+		border-radius: vw(10);
+		padding: vw(7);
+		max-width: vw(430);
+		background-color: #fff;
+
+		@include mobile {
+			position: relative;
+			left: 0;
+			top: 0;
+			border-radius: vmin(10);
+			padding: 0;
+			max-width: vmin(320);
+		}
+
+		.contacts {
+			border: 1px solid rgba(26, 33, 35, 0.1);
+			border-radius: vw(10);
+			padding: vw(30) vw(40) vw(30) vw(35);
+
+			@include mobile {
+				border-radius: vmin(10);
+				padding: vmin(30) vmin(40) vmin(30) vmin(35);
+			}
+
+			&__heading {
+				margin-bottom: vw(15);
+
+				@include mobile {
+					margin-bottom: vmin(15);
+				}
+
+				h5 {
+					font-family: $g-p-bold;
+					font-size: vw(16);
+					line-height: vw(35);
+					letter-spacing: vw(0.6);
+					text-transform: uppercase;
+
+					@include mobile {
+						font-size: vmin(16);
+						line-height: vmin(35);
+						letter-spacing: vmin(0.6);
+					}
+				}
+
+				.contacts-subtitle {
+					font-family: $g-p-light;
+					font-size: vw(12);
+					letter-spacing: vw(0.4);
+					text-transform: uppercase;
+
+					@include mobile {
+						font-size: vmin(14);
+						line-height: vmin(28);
+						letter-spacing: vmin(0.4);
+					}
+
+					.ask {
+						border-bottom: 1px dashed rgba(0, 0, 0, 0.3);
+						padding-bottom: vw(4);
+						color: $main-font-color;
+
+						@include mobile {
+							padding-bottom: vmin(4);
+						}
+					}
+				}
+			}
+
+			&__main {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin-bottom: vw(20);
+
+				@include mobile {
+					margin-bottom: vmin(20);
+				}
+
+				a {
+					color: $main-font-color;
+				}
+
+				&_card {
+					margin-bottom: vw(10);
+
+					@include mobile {
+						margin-bottom: vmin(10);
+					}
+				}
+
+				.c-h {
+					font-family: $g-p-light;
+					font-size: vw(12);
+					line-height: vw(35);
+					letter-spacing: vw(0.5);
+					text-transform: uppercase;
+
+					@include mobile {
+						font-size: vmin(12);
+						line-height: vmin(35);
+						letter-spacing: vmin(0.5);
+					}
+				}
+
+				.c-text,
+				.c-text a {
+					font-family: $g-p-bold;
+					font-size: vw(14);
+					line-height: vw(20);
+					color: $main-font-color;
+
+					@include mobile {
+						font-size: vmin(14);
+						line-height: vmin(20);
+					}
+				}
+
+				a {
+					font-family: $g-p-medium;
+					font-size: vw(12);
+					line-height: vw(26);
+
+					@include mobile {
+						font-size: vmin(12);
+						line-height: vmin(26);
+					}
+
+					img {
+						margin-right: vw(10);
+						width: vw(12);
+						height: vw(12);
+
+						@include mobile {
+							margin-right: vmin(10);
+							width: vmin(12);
+							height: vmin(12);
+						}
+					}
+				}
+
+				.c-sub {
+					font-family: $g-p-light;
+					font-size: vw(12);
+					line-height: vw(20);
+
+					@include mobile {
+						font-size: vmin(12);
+						line-height: vmin(20);
+					}
+
+					img {
+						margin-right: vw(4);
+
+						@include mobile {
+							margin-right: vmin(4);
+						}
+					}
+				}
+			}
+
+			.main-button {
+				width: vw(350);
+
+				@include mobile {
+					width: vmin(250);
+				}
+			}
+		}
+	}
+}
