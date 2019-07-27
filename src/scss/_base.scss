@@ -238,21 +238,6 @@ h2 {
 	}
 }
 
-// h2::before {
-// 	content: "";
-// 	position: absolute;
-// 	width: vw(146);
-// 	height: vw(21);
-// 	background-image: url("../images/logo-eng.png");
-// 	background-size: contain;
-// 	background-repeat: no-repeat;
-
-// 	@include mobile {
-// 		width: vmin(146);
-// 		height: vmin(21);
-// 	}
-// }
-
 .blue-link {
 	display: inline-block;
 
