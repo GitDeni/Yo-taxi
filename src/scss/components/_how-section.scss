@@ -1,6 +1,6 @@
 .how {
-	padding-top: vw(90);
-	height: vw(880);
+	padding-top: vw(100);
+	height: vw(895);
 	background-image: url("../../images/how-bg-1.png");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -13,9 +13,14 @@
 	}
 
 	h2 {
+		margin-bottom: vw(10);
 		width: 100%;
 		text-align: center;
 		color: rgb(255, 255, 255);
+
+		@include mobile {
+			margin-bottom: vmin(10);
+		}
 
 		&::before {
 			display: none;

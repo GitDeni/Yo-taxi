@@ -1,5 +1,5 @@
 .pleasure {
-	padding-top: vw(115);
+	padding-top: vw(90);
 	padding-bottom: vw(100);
 	background-image: url("../../images/pl-bg.png");
 	background-repeat: no-repeat;
@@ -12,11 +12,8 @@
 	}
 
 	h2 {
-		margin-bottom: vw(70);
-
-		@include mobile {
-			margin-bottom: vmin(30);
-		}
+		width: 100%;
+		text-align: center;
 	}
 
 	h2::before {
@@ -29,6 +26,17 @@
 			left: vmin(10);
 			top: vmin(-40);
 			width: vmin(169);
+		}
+	}
+
+	.subtitle {
+		margin-bottom: vw(70);
+		font-family: $g-p-bold;
+		font-size: vw(22);
+
+		@include mobile {
+			margin-bottom: vmin(30);
+			font-size: vmin(14);
 		}
 	}
 
