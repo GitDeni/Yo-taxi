@@ -11,7 +11,7 @@ $('body').on('click', '.tab-nav a', function () {
 	$('.tab-nav a').removeClass('active');
 	$(this).addClass('active');
 	var href = $(this).attr('href');
-	$('.tab-pane').removeClass('active').removeClass('in');
+	$('.modal-pane').removeClass('active').removeClass('in');
 	$(href).addClass('active');
 	$('.credit-leasing').attr('data-id', href);
 	setTimeout(function () {
@@ -26,7 +26,7 @@ $('body').on('click', '.testim-tab-nav a', function () {
 	$('.testim-tab-nav a').removeClass('active');
 	$(this).addClass('active');
 	var href = $(this).attr('href');
-	$('.tab-pane').removeClass('active').removeClass('in');
+	$('.testim-tab-pane').removeClass('active').removeClass('in');
 	$(href).addClass('active');
 	swiper1.update();
 	swiper2.update();
@@ -44,7 +44,7 @@ $('body').on('click', '.complect-tab-nav a', function () {
 	$('.complect-tab-nav a').removeClass('active');
 	$(this).addClass('active');
 	var href = $(this).attr('href');
-	$('.tab-pane').removeClass('active').removeClass('in');
+	$('.charact-pane').removeClass('active').removeClass('in');
 	$(href).addClass('active');
 	setTimeout(function () {
 		$(href).addClass('in');

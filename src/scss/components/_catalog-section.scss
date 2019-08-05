@@ -6,7 +6,13 @@
 	@include mobile {
 		padding-top: vmin(80);
 		padding-bottom: vmin(60);
-	}
+  }
+  
+  .container {
+    @include mobile {
+      padding: 0;
+    }
+  }
 
 	h2 {
 		margin-bottom: vw(60);
@@ -16,6 +22,8 @@
 
 		@include mobile {
 			margin-bottom: vmin(60);
+			padding-left: vmin(10);
+			padding-right: vmin(10);
 		}
 
 		&::before {
@@ -27,11 +35,12 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: vw(45);
-		width: 100%;
+		
 
 		@include mobile {
 			flex-wrap: wrap;
 			margin-bottom: vmin(45);
+			width: vmin(320);
 		}
 
 		&__card {
@@ -190,6 +199,7 @@
 		width: 100%;
 
 		@include mobile {
+      justify-content: center;
 			margin-bottom: vmin(70);
 		}
 
@@ -203,7 +213,7 @@
 			@include mobile {
 				margin-bottom: vmin(20);
 				border-radius: vmin(10);
-				width: 100%;
+				width: vmin(320);
 			}
 
 			&_img {
@@ -371,7 +381,12 @@
 		background-repeat: no-repeat;
 
 		@include mobile {
-			background-size: cover;
+      flex-wrap: wrap;
+      width: vmin(480);
+      height: vmin(641);
+      border-radius: vmin(10);
+      background-image: url('../../images/c-b-bg-mob.png');
+			background-size: contain;
 		}
 
 		&__content {
@@ -379,7 +394,11 @@
 			width: 60%;
 
 			@include mobile {
-				padding: vmin(50) vmin(20) vmin(120);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+				padding: vmin(55) vmin(70);
 				width: 100%;
 			}
 
@@ -399,24 +418,27 @@
 				color: #fff;
 
 				@include mobile {
-					margin-bottom: vmin(5);
-					font-size: vmin(38);
-					line-height: vmin(55);
-					letter-spacing: vmin(1.5);
+					margin-bottom: vmin(15);
+					font-size: vmin(29);
+					line-height: vmin(42);
+          letter-spacing: vmin(1.5);
+          text-align: center;
+          
 				}
 			}
 
 			.subtitle {
 				margin-bottom: vw(30);
 				font-family: $g-p-light;
-				font-size: vw(18);
+				font-size: vw(16);
 				line-height: vw(30);
 				color: rgba(255, 255, 255, 0.4);
 
 				@include mobile {
-					margin-bottom: vmin(30);
+					margin-bottom: vmin(40);
 					font-size: vmin(18);
-					line-height: vmin(30);
+          line-height: vmin(30);
+          color: #fff;
 				}
 			}
 
@@ -424,25 +446,35 @@
 				width: vw(240);
 
 				@include mobile {
-					width: 100%;
+          width: vmin(273);
 				}
 			}
 		}
 
 		&__absolutes {
 			position: relative;
-			font-family: $g-p-light;
-
-			@include mobile {
-				display: none;
-			}
+      font-family: $g-p-light;
+      
+      @include mobile {
+        // display: flex;
+        // justify-content: center;
+        // width: 100%;
+      }
 
 			.ivan {
 				position: absolute;
 				left: vw(-120);
 				top: vw(-25);
 				width: vw(294);
-				height: vw(445);
+        height: vw(445);
+        
+        @include mobile {
+          position: relative;
+          left: 60%;
+          top: vmin(-32);
+          width: vmin(195);
+          height: vmin(294);
+        }
 			}
 
 			.name {
@@ -455,7 +487,16 @@
 				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 				font-size: vw(14);
 				line-height: vw(20);
-				background-color: #fff;
+        background-color: #fff;
+        
+        @include mobile {
+          left: vmin(80);
+          top: vmin(140);
+          border-radius: vmin(10);
+          padding: vmin(15) vmin(25);
+          font-size: vmin(14);
+          line-height: vmin(20);
+        }
 			}
 
 			.job-title {
@@ -467,7 +508,16 @@
 				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 				font-size: vw(13);
 				line-height: vw(20);
-				background-color: #fff;
+        background-color: #fff;
+        
+        @include mobile {
+          left: vmin(150);
+          top: vmin(170);
+          border-radius: vmin(10);
+          padding: vmin(20) vmin(15) vmin(15);
+          font-size: vmin(12);
+          line-height: vmin(20);
+        }
 			}
 		}
 	}

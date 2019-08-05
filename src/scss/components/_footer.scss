@@ -23,6 +23,22 @@
 		}
 	}
 
+	.logo {
+		img {
+			width: vw(187);
+			height: vw(43);
+
+			@include mobile {
+				width: vmin(187);
+				height: vmin(43);
+			}
+    }
+    
+    @include mobile {
+      margin: 0 vmin(26) vmin(23);
+    }
+	}
+
 	.lead-me {
 		display: flex;
 		align-items: center;

@@ -8,7 +8,7 @@ import './tabs';
 import './input-mask';
 import './how-tabs';
 import './faq-form';
-
+import './calc';
 
 import validate from 'jquery-validation';
 
@@ -114,4 +114,18 @@ if (currentDate < hour) {
 	$('#closing-text').text('');
 	$('#closing-hour1').text('сегодня закрыт');
 	$('#closing-text1').text('');
+}
+
+
+$('.car1').addClass('anim');
+$('.tree').addClass('anim');
+
+if ($(window).width() <= 1024) {
+	$('.stage-0 .t').text('01');
+	$('.stage-1 .t').text('02');
+	$('.stage-2 .t').text('03');
+	$('.stage-3 .t').text('04');
+	$('.stage-4 .t').text('05');
+
+	$('.how-pane-2 img').attr('src', '/images/how-22.png');
 }

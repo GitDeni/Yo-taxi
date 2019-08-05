@@ -52,6 +52,11 @@ a {
 	color: rgba(9, 38, 58, 0.8);
 	transition: all 0.3s ease-in-out;
 
+	@media (max-width:1400px) {
+		border-radius: vmin(26);
+		padding: vw(10) vw(22);
+	}
+
 	@include mobile {
 		margin-left: vmin(30);
 		border-radius: vmin(26);
@@ -232,9 +237,10 @@ h2 {
 	}
 
 	@include mobile {
-		font-size: vmin(32);
-		line-height: vmin(55);
-		letter-spacing: vmin(1.5);
+		font-size: vmin(29);
+		line-height: vmin(42);
+    letter-spacing: vmin(1.5);
+    text-align: center;
 	}
 }
 
@@ -423,6 +429,18 @@ h3 {
 		font-size: vmin(24);
 		line-height: vmin(35);
 		letter-spacing: vmin(0.7);
+	}
+}
+
+.before {
+	img {
+		width: vw(245);
+		height: vw(34);
+
+		@include mobile {
+			width: vmin(245);
+			height: vmin(34);
+		}
 	}
 }
 

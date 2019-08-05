@@ -1,5 +1,7 @@
 $('.open-popup').magnificPopup({
 	removalDelay: 500, //delay removal by X to allow out-animation
+	fixedContentPos: true,
+	fixedBgPos: true,
 	callbacks: {
 		beforeOpen: function () {
 			this.st.mainClass = "mfp-zoom-in";

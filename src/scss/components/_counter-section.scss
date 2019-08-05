@@ -1,5 +1,8 @@
 .counter-section {
 	.container {
+		@include mobile {
+			padding: 0;
+		}
 		.banner {
 			display: flex;
 			flex-flow: column;
@@ -13,9 +16,12 @@
 			background-repeat: no-repeat;
 
 			@include mobile {
-				// margin-top: vmin(-210);
-				padding-top: vmin(50);
-				padding-bottom: vmin(80);
+				margin-top: 0;
+				padding-top: vmin(30);
+				padding-bottom: 0;
+				width: 100%;
+				border-radius: vmin(10) vmin(10) 0 0;
+				background-image: url('../../images/counter-bg-mob.png');
 			}
 
 			.counter {
@@ -30,7 +36,24 @@
 					display: flex;
 					flex-wrap: wrap;
 					align-items: center;
-					justify-content: space-between;
+          justify-content: space-between;
+
+          img {
+            width: vw(123);
+            height: vw(70);
+  
+            @include mobile {
+              margin: 0;
+              width: vmin(96);
+              height: vmin(55);
+            }
+          }
+          
+          @include mobile {
+            margin-top: vmin(10);
+            margin-bottom: vmin(10);
+            width: 70%;
+          }
 				}
 
 				h3 {
@@ -43,10 +66,13 @@
 					color: #fff;
 
 					@include mobile {
-						margin-bottom: vmin(50);
+						margin-bottom: vmin(20);
 						font-size: vmin(28);
 						line-height: vmin(55);
-						letter-spacing: vmin(1.2);
+            letter-spacing: vmin(1.2);
+            display: flex;
+            flex-flow: column;
+            align-items: center;
 					}
 
 					.hours {
@@ -54,8 +80,9 @@
 						letter-spacing: vw(2);
 
 						@include mobile {
-							margin: 0 auto;
-							font-size: vmin(52);
+              margin: 0 auto;
+              font-family: $g-p-bold;
+							font-size: vmin(41);
 							letter-spacing: vmin(2);
 						}
 					}
@@ -66,22 +93,12 @@
 						text-transform: none;
 
 						@include mobile {
-							font-size: vmin(24);
+              font-family: $g-p-light;
+							font-size: vmin(22);
 							letter-spacing: vmin(0.9);
 						}
 					}
-				}
-
-				.counter-m img {
-					width: vw(123);
-					height: vw(70);
-
-					@include mobile {
-						margin: 0 auto;
-						width: vmin(123);
-						height: vmin(70);
-					}
-				}
+        }
 			}
 
 			.buttons {
@@ -92,13 +109,18 @@
 
 				.white-blue-button {
 					@include mobile {
-						margin-top: vmin(40);
+            margin-top: vmin(20);
+            margin-bottom: vmin(25);
 					}
 				}
 			}
 
 			.absolutes {
-				position: relative;
+        position: relative;
+        
+        @include mobile {
+          order: 2;
+        }
 
 				.watch-img {
 					position: absolute;
@@ -108,9 +130,8 @@
 					height: vw(427);
 
 					@include mobile {
-						left: vmin(-130);
-						top: vmin(50);
-						z-index: 2;
+						left: vmin(-110);
+						top: vmin(-80);
 						width: vmin(150);
 						height: vmin(256);
 					}
@@ -144,7 +165,8 @@
 						height: vmin(119);
 						font-size: vmin(13);
 						line-height: vmin(16);
-						margin-bottom: vmin(20);
+            margin-bottom: vmin(20);
+            z-index: 2;
 					}
 
 					span {

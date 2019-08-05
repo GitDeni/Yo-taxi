@@ -4,8 +4,28 @@
 	background-color: #f9f9f9;
 
 	@include mobile {
-		padding-top: vmin(100);
+		padding-top: vmin(80);
 		padding-bottom: vmin(100);
+	}
+
+	.before {
+		display: flex;
+		align-items: center;
+		font-family: $g-p-medium;
+		color: $sky-blue;
+		font-size: vw(28);
+
+		@include mobile {
+			font-size: vmin(28);
+		}
+
+		img {
+			margin-left: vw(10);
+
+			@include mobile {
+				margin-left: vmin(10);
+			}
+		}
 	}
 
 	h2 {

@@ -12,7 +12,7 @@ var swiper1 = new Swiper ('.video-swiper', {
 	breakpoints: {
 		1024: {
 			slidesPerView: 1,
-			spaceBetween: 50,
+			spaceBetween: 80,
 		},
 	},
 	// Navigation arrows
@@ -33,7 +33,7 @@ var swiper2 = new Swiper ('.photo-swiper', {
 	breakpoints: {
 		1024: {
 			slidesPerView: 1,
-			spaceBetween: 50,
+			spaceBetween: 80,
 		},
 	},
 	// Navigation arrows
@@ -54,7 +54,7 @@ var swiper3 = new Swiper ('.written-swiper', {
 	breakpoints: {
 		1024: {
 			slidesPerView: 1,
-			spaceBetween: 50,
+			spaceBetween: 80,
 		},
 	},
 	// Navigation arrows
@@ -65,18 +65,43 @@ var swiper3 = new Swiper ('.written-swiper', {
 })
 
 
-var swiper4 = new Swiper ('.char-slider', {
-	slidesPerView: 1,
+$('body').on('click', '.make-swiper', function () {
+	var swiper4 = new Swiper ('.char-slider', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		simulateTouch: false,
+		loop: true,
+		lazy: {
+			loadPrevNext: true,
+			loadOnTransitionStart: true,
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.char-next',
+			prevEl: '.char-prev',
+		},
+	})
+	// swiper4.update();
+});
+
+var swiper5 = new Swiper ('.calc-slider', {
+	slidesPerView: 4,
 	spaceBetween: 30,
 	simulateTouch: false,
-	lazy: {
-		loadPrevNext: true,
-		loadOnTransitionStart: true,
+	breakpoints: {
+		1024: {
+			slidesPerView: 1,
+			spaceBetween: 100,
+		},
 	},
+	// lazy: {
+	// 	loadPrevNext: true,
+	// 	loadOnTransitionStart: true,
+	// },
 	// Navigation arrows
 	navigation: {
-		nextEl: '.char-next',
-		prevEl: '.char-prev',
+		nextEl: '.calc-next',
+		prevEl: '.calc-prev',
 	},
 })
 
@@ -117,4 +142,4 @@ function tabs() {
 }
 
 
-export {swiper1, swiper2, swiper3, tabs}
+export {swiper1, swiper2, swiper3, swiper5, tabs}

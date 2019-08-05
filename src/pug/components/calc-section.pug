@@ -1,3 +1,206 @@
 section.calc-section#calc-section
 	.container
-	
+		h2
+			| Рассчитайте, 
+			span
+				| сколько вы сэкономите #[br]
+			| денег при аренде авто в 
+			span.blue
+				| yowheels taxi
+		.calculator
+			.calculator__slider
+				.heading
+					| Выберите авто
+					.calc-slider-buttons
+						.calc-prev
+							img(src="../images/calc-prev.png", alt="")
+						.calc-next
+							img(src="../images/calc-next.png", alt="")
+				.calc-slider
+					.swiper-wrapper
+						.swiper-slide(data-rent="50" data-sell="50000")
+							.content
+								.model
+									| Polo
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-1.png", alt="")
+						.swiper-slide(data-rent="70" data-sell="55000")
+							.content
+								.model
+									| Rapid
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-2.png", alt="")
+						.swiper-slide(data-rent="50" data-sell="50000")
+							.content
+								.model
+									| Solaris
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-3.png", alt="")
+						.swiper-slide(data-rent="30" data-sell="40000")
+							.content
+								.model
+									| Polo
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-1.png", alt="")
+						.swiper-slide(data-rent="70" data-sell="20000")
+							.content
+								.model
+									| Polo
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-2.png", alt="")
+						.swiper-slide(data-rent="40" data-sell="40000")
+							.content
+								.model
+									| Rapid
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-3.png", alt="")
+						.swiper-slide(data-rent="50" data-sell="30000")
+							.content
+								.model
+									| Solaris
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-3.png", alt="")
+						.swiper-slide(data-rent="50" data-sell="50000")
+							.content
+								.model
+									| Polo
+								.price
+									| 40-50 руб.
+								.subtitle
+									| Средняя цена #[br] аренды по городу
+								.radio
+									span
+							.img
+								img(src="../images/calc-2.png", alt="")
+
+			.calculator__tabs
+				.calc-pane
+					.days
+						.heading
+							| Сколько дней в месяц вы работаете?
+						.slider.dis
+							#ui1
+							.days-count.left-days-count
+								| 6 дней
+					.months
+						.heading
+							| Сколько вы планируете работать #[br]
+							| на арендованном авто?
+						.slider.right-slider.dis
+							#ui2
+							.days-count.right-days-count
+								| 6 дней
+			.calculator__output
+				.red
+					.heading
+						.img
+							img(src="../images/red-img.png", alt="")
+						| С ОБЫЧНОЙ АРЕНДОЙ
+					.middle
+						.price
+							.price__upper
+								span.red-price
+									| 0 
+								.rub
+									| руб.
+							.text
+								| Ваши платежи 
+								| за 
+								span.month-count
+								| 0 
+								| мес. аренды
+						.sub
+							.img
+								img(src="../images/calc-cancel.png", alt="")
+							.t
+								| вы просто выплатите эту сумму за аренду
+								span.t-span
+									| и не получите автомобиль в собственность
+				.green
+					.heading
+						.img
+							img(src="../images/green-img.png", alt="")
+						| С АРЕНДОЙ YOWHEELS
+					.middle
+						.green-middle-left
+							.block.one
+								.upper
+									span.green-price
+										| 0 
+									.rub
+										| руб.
+								.subtitle
+									| Стоимость #[br] выбранного авто
+						
+							.block.two
+								.upper
+									.minus
+										| -
+									span.green-discount
+										| 0 
+									.rub
+										| руб.
+								.subtitle
+									| Ваш платеж за 
+									span.month-count
+										| 7 
+									| мес.
+						.block.three
+							.sub
+								.img
+									img(src="../images/calc-verified.png", alt="")
+								.t
+									| ВЫ ПОСТЕПЕННО ВЫКУПАЕТЕ АВТОМОБИЛЬ
+									span.t-span
+										| и он переходит к вам в собственность
+		.bottom
+			a.main-button.anchor(href="#catalog")
+				span
+					| Выбрать авто для работы
+			.tip-link
+				| А что если я не планирую так долго работать  в такси
+				.tip
+					| Text text text #[br]
+					|  text text

@@ -1,9 +1,18 @@
 .header {
+
+  @include mobile {
+    padding-top: vmin(30);
+  }
 	padding-top: vw(25);
 
 	.container {
 		align-items: center;
 		justify-content: space-between;
+
+		@include mobile {
+			flex-flow: column;
+			align-content: center;
+		}
 	}
 
 	.part-wrapper {
@@ -11,20 +20,26 @@
 		align-items: center;
 
 		@include mobile {
-			flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
 		}
 	}
 
 	.logo {
 		img {
-			width: vw(196);
-			height: vw(41);
+			width: vw(187);
+			height: vw(43);
 
 			@include mobile {
-				width: vmin(196);
-				height: vmin(41);
+				width: vmin(187);
+				height: vmin(43);
 			}
-		}
+    }
+    
+    @include mobile {
+      margin: 0 vmin(26) vmin(23);
+    }
 	}
 
 	.header-address {
@@ -109,7 +124,8 @@
 
 		@include mobile {
 			font-size: vmin(16);
-			margin: vmin(20);
+			margin: vmin(15);
+			padding-left: vmin(20);
 		}
 
 		.blue-link {
@@ -127,9 +143,10 @@
 			height: vw(13);
 			background-image: url("../../images/phone-call.png");
 			background-repeat: no-repeat;
+			background-size: contain;
 
 			@include mobile {
-				left: vmin(-20);
+				left: vmin(-1);
 				top: vmin(5);
 				width: vmin(13);
 				height: vmin(13);

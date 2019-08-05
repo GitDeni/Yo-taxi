@@ -4,22 +4,16 @@
 	background-color: #121c24;
 
 	@include mobile {
-		padding-top: vmin(90);
+		padding-top: vmin(60);
 		height: vmin(1100);
-	}
-
-	.subtitle {
-		margin-top: vw(20);
-		font-family: $g-p-light;
-		font-size: vw(18);
-		text-transform: none;
-		color: #fff;
-
-		@include mobile {
-			font-size: vmin(18);
-			margin-top: vmin(20);
-		}
-	}
+  }
+  
+  .container {
+    @include mobile {
+      padding-left: vmin(80);
+      padding-right: vmin(80);
+    }
+  }
 
 	.swiper-slide {
 		border-radius: vw(10);
@@ -31,7 +25,8 @@
 		@include mobile {
 			border-radius: vmin(10);
 			padding: vmin(10);
-			height: vmin(370);
+      height: vmin(370);
+      max-width: vmin(320);
 		}
 	}
 
@@ -63,10 +58,23 @@
 	h3 {
 		font-size: vw(38);
 		color: #fff;
+		margin-bottom: vw(20);
 
 		@include mobile {
-			font-size: vmin(38);
-			line-height: vmin(50);
+			font-size: vmin(29);
+      line-height: vmin(42);
+      // padding-left: vmin(60);
+      width: 90%;
+		}
+	}
+
+	.subtitle {
+		font-family: $g-p-light;
+		font-size: vw(18);
+		color: #fff;
+
+		@include mobile {
+			font-size: vmin(18);
 		}
 	}
 
@@ -74,7 +82,9 @@
 		width: 40%;
 
 		@include mobile {
-			width: 100%;
+      // margin: 0 auto;
+      width: 90%;
+      
 		}
 
 		.testim-main-button {
@@ -176,7 +186,7 @@
 
 	.tabs {
 		margin-bottom: vw(60);
-		padding-top: vw(30);
+		padding-top: vw(60);
 		width: 100%;
 
 		@include mobile {
@@ -203,7 +213,7 @@
 
 		@include mobile {
 			flex-wrap: wrap;
-			justify-content: flex-end;
+			// justify-content: flex-end;
 		}
 
 		.swiper-buttons {
@@ -213,7 +223,7 @@
 
 			@include mobile {
 				order: -1;
-				margin-bottom: vmin(50);
+        margin-bottom: vmin(10);
 				width: vmin(150);
 			}
 
@@ -249,7 +259,21 @@
 					background-color: $sky-blue;
 				}
 			}
-		}
+    }
+    
+    .find-out {
+      @include mobile {
+        width: vmin(320);
+        height: vmin(60);
+        padding: 0;
+      }
+
+      span {
+        @include mobile {
+          font-size: vmin(12);
+        }
+      }
+    }
 	}
 }
 

@@ -6,6 +6,6 @@
 	@return $value / $base * 100vh;
 }
 
-@function vmin($value, $base: 375) {
+@function vmin($value, $base: 480) {
 	@return $value / $base * 100vmin;
 }

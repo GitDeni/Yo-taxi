@@ -12,3 +12,5 @@ require('./vendor/jquery.magnific-popup.min');
 // require('./vendor/jquery.inputmask.min');
 //require('./vendor/jquery.maskedinput.min');
 require('../js/vendor/parallax.min');
+require('../js/vendor/uislider');
+require('../js/vendor/jquery.ui.touch-punch.min');
